@@ -11,10 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-	$people=['Ali', 'Sara' , 'Peyman'];
-    return view('welcome')->with('people', $people);
-});
-Route::get('about', function () {
-    return view('pages.about');
-});
+Route::get('/', 'PageController@home');
+Route::get('about', 'PageController@about');
